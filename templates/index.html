@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Waste Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body  style="background-image: url('https://www.itl.cat/pngfile/big/294-2949775_pastel-gradient-background.jpg');">
+
+<div class="container">
+  <h1 class="jumbotron bg-primary"><img src="https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png" alt="logo"  width="110" height="110"/>     Waste Classfication</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Image :</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+  <img src="{{img_path}}" height="244px" width="244px">
+	<h2><i> {{prediction}} </i></h2>
+  <h1>Why do we recycle waste products ?</h1>
+  <h5>Check the below video</h5>
+ 
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/7UuUeoyYmxI" frameborder="0"
+    allowfullscreen></iframe>
+ 
+  <h1>Wanna see how we recycle your waste ?</h1>
+  <h5>Check the bellow video</h5>
+  
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/s4LZwCDaoQM" frameborder="0"
+    allowfullscreen></iframe>
+
+	{% endif %}
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
